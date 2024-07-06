@@ -1,12 +1,12 @@
 {
-  "name": "angular-datatables-workspace",
-  "version": "18.0.0",
+  "name": "@hype-plus/angular-datatables",
+  "version": "0.0.2",
   "description": "Angular directive for DataTables",
   "scripts": {
     "start": "npm run link:lib && ng serve",
     "build:lib": "npm run clean && ng build angular-datatables --configuration=production && npm run lib:schematics:build",
-    "clean": "rimraf -f lib/**/index.{d.ts,js,js.map,metadata.json} demo/**/*.{d.ts,js,map,metadata.json} schematics/**/*.{d.ts,js,map}",
-    "link:lib": "rimraf node_modules/angular-datatables && npm run build:lib && linklocal",
+    "clean": "rimraf -f dist/**",
+    "link:lib": "rimraf node_modules/@hype-plus/angular-datatables && npm run build:lib && linklocal",
     "demo:test": "ng test",
     "demo:test-ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
     "lib:schematics:build": "rimraf dist/lib/schematics && tsc -p lib/schematics/tsconfig.json && copyfiles lib/schematics/{src/collection.json,src/ng-add/schema.json} dist",
@@ -63,7 +63,7 @@
     "@angular/platform-browser": "^18.0.5",
     "@angular/platform-browser-dynamic": "^18.0.5",
     "@angular/router": "^18.0.5",
-    "angular-datatables": "file:dist/lib",
+    "@hype-plus/angular-datatables": "^0.0.1",
     "clipboard": "^2.0.8",
     "core-js": "^3.23.3",
     "datatables.net": "^2.0.3",
@@ -88,13 +88,5 @@
     "tether": "^2.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/l-lin/angular-datatables.git"
-  },
-  "bugs": {
-    "url": "https://github.com/l-lin/angular-datatables/issues"
-  },
-  "homepage": "https://github.com/l-lin/angular-datatables#readme"
+  }
 }
